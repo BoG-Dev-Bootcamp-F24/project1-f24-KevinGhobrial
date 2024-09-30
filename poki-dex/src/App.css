@@ -1,0 +1,103 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  margin: 0; 
+  background-color: #f0f0f0; 
+}
+
+.pokedex {
+  display: flex; 
+  justify-content: center; 
+  align-items: flex-start; 
+  width: 90%; /* Increased width */
+  max-width: 1200px; /* Increased max-width */
+  background-color: white; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  padding: 30px; /* Increased padding */
+}
+
+.pokemon-display {
+  text-align: center; 
+  margin-right: 20px; 
+}
+
+.pokemon-image {
+  width: 150px; 
+  height: 150px; 
+}
+
+.name {
+  font-size: 24px; 
+  font-weight: bold; 
+}
+
+.types {
+  display: flex; 
+  justify-content: center; 
+  margin: 10px 0; 
+}
+
+.type {
+  padding: 5px 10px; 
+  margin: 0 5px; 
+  border-radius: 15px; 
+  color: white; 
+}
+
+.info-moves {
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start; 
+}
+
+.view-buttons {
+  margin-bottom: 10px; 
+}
+
+.view-buttons button {
+  padding: 10px 15px; 
+  border: none; 
+  border-radius: 5px; 
+  color: white; 
+  cursor: pointer; 
+}
+
+.view-buttons .active {
+  font-weight: bold; 
+}
+
+.info, .moves {
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  background-color: #fafafa; 
+}
+
+.moves ul {
+  list-style-type: none; 
+  padding: 0; 
+}
+
+.moves li {
+  margin: 5px 0; 
+}
+
+.navigation {
+  margin-top: 10px; 
+  display: flex; 
+  justify-content: center; 
+}
+
+.navigation button {
+  padding: 10px; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+
+.navigation button:hover {
+  background-color: #eee; 
+}
