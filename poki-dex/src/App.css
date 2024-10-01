@@ -5,6 +5,8 @@ body {
   min-height: 100vh; 
   margin: 0; 
   background-color: #f0f0f0; 
+  background-image: url('/Users/kevinghobrial/Desktop/project1-f24-KevinGhobrial/poki-dex/poke.gif');
+  background-size: cover;
 }
 
 .pokedex {
