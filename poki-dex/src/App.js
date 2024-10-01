@@ -23,9 +23,9 @@ const typeColors = {
 };
 
 function App() {
-  const [id, setId] = useState(1); // Pokémon ID
-  const [pokemon, setPokemon] = useState(null); // Pokémon data
-  const [view, setView] = useState('info'); // 'info' or 'moves'
+  const [id, setId] = useState(1); 
+  const [pokemon, setPokemon] = useState(null); 
+  const [view, setView] = useState('info'); 
 
   // Fetch Pokémon data based on ID
   useEffect(() => {
@@ -35,7 +35,6 @@ function App() {
       .catch((error) => console.error('Error fetching Pokémon:', error));
   }, [id]);
 
-  // Handlers for next and previous buttons
   const handleNext = () => setId((prevId) => prevId + 1);
   const handlePrev = () => setId((prevId) => (prevId > 1 ? prevId - 1 : 1));
 
@@ -65,35 +64,17 @@ function App() {
           ))}
         </div>
   
-        {/* Arrow navigation buttons */}
         <div className="navigation">
           <button onClick={handlePrev}>⇦</button>
           <button onClick={handleNext}>⇨</button>
         </div>
       </div>
   
-      {/* New container for Info and Moves */}
-      <div className="info-moves">
-        {/* Buttons for Info and Moves */}
-        <div className="view-buttons">
-          <button
-            className={view === 'info' ? 'active' : ''}
-            style={{ backgroundColor: view === 'info' ? 'green' : 'gray' }}
-            onClick={() => setView('info')}
-          >
-            Info
-          </button>
-          <button
-            className={view === 'moves' ? 'active' : ''}
-            style={{ backgroundColor: view === 'moves' ? 'green' : 'gray' }}
-            onClick={() => setView('moves')}
-          >
-            Moves
-          </button>
-        </div>
-  
+      <div>
         {/* Conditionally render Info or Moves based on the active view */}
+        <p1>Info:</p1>
         {view === 'info' ? (
+          
           <div className="info">
             <div>Height: {(pokemon.height / 10).toFixed(1)} m</div>
             <div>Weight: {(pokemon.weight / 10).toFixed(1)} kg</div>
@@ -113,6 +94,27 @@ function App() {
             </ul>
           </div>
         )}
+
+  
+        <div className="info-moves">
+        {/* Buttons for Info and Moves */}
+        <div className="view-buttons">
+          <button
+            className={view === 'info' ? 'active' : ''}
+            style={{ backgroundColor: view === 'info' ? 'green' : 'gray' }}
+            onClick={() => setView('info')}
+          >
+            Info
+          </button>
+          <button
+            className={view === 'moves' ? 'active' : ''}
+            style={{ backgroundColor: view === 'moves' ? 'green' : 'gray' }}
+            onClick={() => setView('moves')}
+          >
+            Moves
+          </button>
+        </div>
+        </div>
       </div>
     </div>
   );  
